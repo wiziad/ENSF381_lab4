@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 – Exercise 2</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+
+        //Part 1 - Declaring Functions
+        /*
+        function add(number1, number2){
+            return number1 + number2
+        }
+        console.log(add(5,9))
+
+        function sub(number1, number2){
+            return number1 - number2
+        }
+        console.log(sub(5,9))
+        */
+
+
+
+        //Part 2 - Using Default Parameters
+        /*
+        function add(number1, number2=10){
+            return number1 + number2
+        }
+        console.log(add(9))
+
+        function sub(number1, number2=10){
+            return number1 - number2
+        }
+        console.log(sub(9))
+        */
+
+
+
+        //Arrow Functions and Callbacks
+        let add = (number1,number2) => number1 + number2;
+        console.log(add(5,9))
+
+        let sub = (number1,number2) => number1 - number2;
+        console.log(sub(5,9))
+
+        let mulitply = (number1,number2) => number1 * number2;
+        console.log(mulitply(5,9))
+
+        let divide = (number1,number2) => {
+            if (number2 == 0){
+                return "Divide by Zero Error"
+            }
+            else {
+                return number1 / number2;
+            }
+            
+        }
+        console.log(divide(5,0))
+
+        function calculator(number1,number2,callback){
+            return callback(number1,number2);
+            
+        }
+        console.log(calculator(1,2,add))
+        console.log(calculator(2,3,mulitply))
+
+
+    </script>
+</body>
+</html>

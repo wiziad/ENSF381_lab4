@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 – Exercise 3</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+        // Write your JavaScript code here
+
+        let classRoster = [ "Alice", "Tom", "Charlie", "Diana", "Evan"]
+
+        let rosterString = classRoster.toString();
+        console.log(rosterString);
+        console.log(classRoster);
+
+        classRoster.push("Fiona", "Nancy")
+        classRoster.shift()
+        console.log(classRoster)
+        console.log(classRoster.length)
+
+
+        let classInfo = {
+            className: "ENSF381: Full-Stack Web Development",
+            instructor: 'Dr. Smith',
+            students: classRoster,
+            details: 
+                {semester: 'Winter',
+                year: 2025}
+            
+        }
+        Object.defineProperty(classInfo, 'schedule',{value:['Monday','Wednesday','Friday']})
+        classInfo.instructor='Dr. Deb'
+        console.log(classInfo.className)
+        console.log(classInfo.instructor)
+        console.log(classInfo.students)
+        console.log(classInfo.details.semester)
+        console.log(classInfo)
+
+        let className = classInfo.className
+        let students = classInfo.students
+
+        console.log(className)
+        console.log(students)
+
+        let semester = classInfo.details.semester
+        let year = classInfo.details.year
+
+        console.log(semester)
+        console.log(year)
+
+
+        let [student1, student2, ...remainingstudents] = classRoster;
+
+        console.log(student1, student2)
+        console.log(remainingstudents)
+
+
+
+    </script>
+</body>
+</html>
